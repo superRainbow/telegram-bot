@@ -39,6 +39,8 @@ npm run build
 
 ## Demo & 簡報
 
-<iframe src="https://player.vimeo.com/video/497500360" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+Demo
+[影片連結](https://player.vimeo.com/video/497500360)
 
+簡報
 [E2E 測試搭配 Telegram bot](https://hackmd.io/@UO6Eobd5QS6fQYbfPJRIKA/S1Fr9L-RD)
