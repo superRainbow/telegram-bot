@@ -13,6 +13,7 @@ const init = () => {
 
 const checkTime = () => {
     const now = moment().tz('Asia/Taipei');
+    console.log('log', now, now.hour(), now.minute());
     Object.keys(TIME).map(time => {
         const booking = time.split(':');
         if (parseInt(booking[0], 10) === now.hour() && (parseInt(booking[1], 10) - now.minute() < 10 && parseInt(booking[1], 10) - now.minute() > 0)) {
