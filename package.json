@@ -2,16 +2,22 @@
   "name": "telegram-bot",
   "version": "1.0.0",
   "description": "機器人",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node index.js"
-  },
   "author": "rainbow",
   "license": "ISC",
+  "main": "index.js",
+  "engines": {
+    "node": "12.18.4",
+    "npm": "6.14.6"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "telegraf": "^3.38.0"
   }
 }
