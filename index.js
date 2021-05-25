@@ -16,7 +16,10 @@ const checkTime = () => {
     console.log('log', now, now.hour(), now.minute());
     Object.keys(TIME).map(time => {
         const booking = time.split(':');
-        if (parseInt(booking[0], 10) === now.hour() && (parseInt(booking[1], 10) - now.minute() <= 10 && parseInt(booking[1], 10) - now.minute() > 0)) {
+        const subtract = (parseInt(booking[0], 10) * 60 + parseInt(booking[1], 10)) - (now.hour() * 60 + now.minute());
+        console.log('subtract', subtract);
+        // 判斷是否是 10 分鐘內即將到達的會議 (將時間換算成分鐘相減)
+        if ( subtract > 0 && subtract <= 10) {
             bot.telegram.sendMessage( process.env.TELEGRAM_TEAM_ID, TIME[time]);
         }
     });
