@@ -15,6 +15,8 @@ const checkTime = () => {
     const now = moment().tz('Asia/Taipei');
     console.log('log', now, now.hour(), now.minute());
     Object.keys(TIME).map(time => {
+        // 假如不是週五且 time 為 17:30 時就不用執行下去
+        if (moment().isoWeekday() !== 5 && time === '17:30') { return };
         const booking = time.split(':');
         const subtract = (parseInt(booking[0], 10) * 60 + parseInt(booking[1], 10)) - (now.hour() * 60 + now.minute());
         console.log('subtract', subtract);
